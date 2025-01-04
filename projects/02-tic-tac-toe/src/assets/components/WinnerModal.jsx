@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { Square } from "./Square"
 export function WinnerModal({ winner, resetgame}) {
     if (winner === null) return null
@@ -24,3 +25,7 @@ export function WinnerModal({ winner, resetgame}) {
 
     )
 }
+WinnerModal.propTypes = {
+  winner: PropTypes.node.isRequired,
+  resetgame: PropTypes.bool.isRequired,
+};

@@ -1,7 +1,7 @@
 import { useState} from 'react'
 import confetti from 'canvas-confetti'
 import { Square } from "./assets/components/Square"
-import { TURNS, WINNING_COMBINATIONS } from './assets/components/constants'
+import { TURNS } from './assets/components/constants'
 import { checkWinnerFrom } from './assets/logic/board'
 import { WinnerModal } from './assets/components/WinnerModal'
 import { saveGameStorage, resetGameStorage } from './assets/logic/storage'
