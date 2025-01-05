@@ -4,9 +4,10 @@ import './App.css'
 const FollowMouse = () => {
   const [enabled, setEnabled] = useState(false)
   const [position, setPosition] = useState({ x: 0, y: 0 })
-
+  //Pointer move es un evento que se dispara cada vez que el mouse se mueve
   useEffect(() => {
     console.log('efecto', { enabled })
+
 
 
     const handleMouseMove = (event) => {
@@ -28,6 +29,17 @@ const FollowMouse = () => {
     }
   }
     , [enabled])
+
+
+  //change body className
+  useEffect(() => {
+    document.body.classList.toggle('no-cursor', enabled)
+
+    return () => {
+      document.body.classList.remove('no-cursor')
+    }
+  }, [enabled])
+    
   return (
     <main>
       <div style={{
